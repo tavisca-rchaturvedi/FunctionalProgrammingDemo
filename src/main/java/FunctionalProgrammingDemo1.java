@@ -1,0 +1,2 @@
+public class FunctionalProgrammingDemo1 {
+}
