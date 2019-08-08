@@ -12,7 +12,8 @@ public class NameReader {
     public static void main(String[] args) {
         NameReader nameReader = new NameReader();
         Optional<String> mayBeName = nameReader.getName(1);
-        mayBeName.ifPresent(nameReader::printIt);
+//        mayBeName.ifPresent(nameReader::printIt);
+        mayBeName.ifPresent(name -> System.out.println(name));
     }
 
     public Optional<String> getName(int id){
