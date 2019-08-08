@@ -1,17 +1,20 @@
 package optionalExample;
 
+import java.util.Optional;
+
 public class NameReader {
 
     public static void main(String[] args) {
         NameReader nameReader = new NameReader();
-        String name = nameReader.getName(0);
-        System.out.println(name.toLowerCase());
+        Optional<String> name = nameReader.getName(1);
+        if(name.isPresent())
+            System.out.println(name.get());
     }
 
-    public String getName(int id){
+    public Optional<String> getName(int id){
         if(id == 1){
-            return "ABCD";
+            return Optional.of("ABCD");
         }
-        return null;
+        return Optional.empty();
     }
 }
