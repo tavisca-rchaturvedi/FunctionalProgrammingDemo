@@ -13,7 +13,6 @@ public class ThreadExample {
         Thread t2 = new Thread(threadExample::numberPrinter);
         t2.start();
         System.out.println("Printed Second");
-
         Thread t3 = new Thread(threadExample::numberPrinter);
         t3.start();
         System.out.println("Printing Third");
